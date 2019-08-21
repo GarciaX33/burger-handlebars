@@ -1,0 +1,51 @@
+<div class="container my-5">
+    <div class="row">
+
+        <div class="col-sm-6 mx-auto">
+            <h3 class="font-italic">Devour this  burger:</h3>
+
+            {{#each burger}}
+            {{#unless devoured}}
+
+            <h1> {{burger_name}}</h1>
+            <button class="devour-burger" data-id="{{id}}">
+                DEVOUR TIME!
+            </button>
+
+            {{/unless}}
+            {{/each}}
+
+
+        </div>
+
+        <div class="col-smm-6 mx-auto">
+            <img src="\assets\img\burger2.png" class="burger2" alt="">
+            <h3 class="font-italic">Burgers devoured:</h3>
+
+            {{#each burger}}
+            {{#if devoured}}
+            <h1> {{burger_name}}</h1>
+
+            {{/if}}
+            {{/each}}
+
+        </div>
+
+
+        <div class="col-sm-12 text-center">
+            <h3 class="py-2 text-white">Add a Burger!</h3>
+
+            <form class="create-form">
+                <div class="form-group">
+                    <input type="text" class="btn-lg text-center" id="name" name="name"
+                        placeholder="Insert Burger Name">
+
+
+                    <input type="hidden" id="devoured" value="0">
+                </div>
+                <button class="btn btn-warning text-white p-3" type="submit">Add a burger</button>
+            </form>
+        </div>
+
+    </div>
+</div>
