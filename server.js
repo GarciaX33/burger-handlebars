@@ -10,6 +10,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + './views'));
+app.use(express.static(__dirname + './controllers'));
 
 //exp-handlebars
 var exphbs = require('express-handlebars');
